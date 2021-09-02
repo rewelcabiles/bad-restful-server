@@ -4,7 +4,6 @@ from flask import request, jsonify
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-app.config["PORT"] = 8080
 app.config["data_file"] = "api_data.json"
 
 # Create some test data for our catalog in the form of a list of dictionaries.
@@ -63,4 +62,4 @@ def api_id(data):
 		
 
 
-app.run(port=8080)
+app.run(host="0.0.0.0", port=8080)
